@@ -1,0 +1,9 @@
+[workspace]
+    members = [
+        "hello_world",
+        "loops",
+        "main",
+        "ownership",
+        "variables"]
+
+    resolver = "3"
