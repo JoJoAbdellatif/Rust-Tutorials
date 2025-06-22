@@ -8,3 +8,4 @@
     loops = { path = "../loops" }
     variables = { path = "../variables" }
     ownership = { path = "../ownership" }
+    functions = { path = "../functions" }

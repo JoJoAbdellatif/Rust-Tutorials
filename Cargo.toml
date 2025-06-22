@@ -4,6 +4,7 @@
         "loops",
         "main",
         "ownership",
-        "variables"]
+        "variables",
+        "functions"]
 
     resolver = "3"
