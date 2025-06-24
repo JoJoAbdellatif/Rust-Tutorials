@@ -5,6 +5,8 @@
         "main",
         "ownership",
         "variables",
-        "functions"]
+        "functions",
+        "structs",
+        "enums"]
 
     resolver = "3"
