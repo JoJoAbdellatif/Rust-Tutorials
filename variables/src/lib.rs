@@ -62,9 +62,16 @@ pub fn vars() {
     // --------------------------------------------------------------------------------------------------------------------------- //
     // Tuples
 
-    let data = ("Joey", 22u8);
+    // Tuples are identified by the parenthesis.
+    let data: (&str, u8) = ("Joey", 22u8);
+    let _xyz = data.1;
+
+    // The following context unpacks the elements in "data" into "_name" and "_age".
     let (_name, _age) = data;
-    let _age = data.1;
+
+    // There is also the option to unpack specific elements. the following unpacks the second element of data into "_age_specific".
+    // The first element will not be packed
+    let (_, _age_specific) = data;
 
     // --------------------------------------------------------------------------------------------------------------------------- //
     // Lists
