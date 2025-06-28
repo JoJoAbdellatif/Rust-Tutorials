@@ -33,6 +33,4 @@ pub fn enum_testing() {
         AnimalType::Rabbit => println!("Animal_1 is a Rabbit!"),
         _ => println!("This seems Complicated!"),
     }
-
-
 }
