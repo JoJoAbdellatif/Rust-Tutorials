@@ -19,7 +19,7 @@ name = "hello_world"
 version = "0.1.0"
 
 [[package]]
-name = "loops"
+name = "iters"
 version = "0.1.0"
 
 [[package]]
@@ -30,7 +30,7 @@ dependencies = [
  "enums",
  "functions",
  "hello_world",
- "loops",
+ "iters",
  "ownership",
  "variables",
 ]

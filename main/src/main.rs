@@ -1,5 +1,5 @@
 #![deny(clippy::all)]
 
 fn main() {
-    loops::looping();
+    hello_world::hello();
 }

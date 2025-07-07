@@ -1,13 +1,14 @@
 [workspace]
     members = [
         "hello_world",
-        "loops",
         "main",
         "ownership",
         "variables",
         "functions",
         "structs",
         "enums",
-        "collections"]
+        "collections",
+        "iters",
+        ]
 
     resolver = "3"

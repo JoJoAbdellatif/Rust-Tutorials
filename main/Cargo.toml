@@ -5,9 +5,9 @@
 
 [dependencies]
     hello_world = { path = "../hello_world" }
-    loops = { path = "../loops" }
     variables = { path = "../variables" }
     ownership = { path = "../ownership" }
     functions = { path = "../functions" }
     enums = { path = "../enums" }
     collections = { path = "../collections"}
+    iters = { path = "../iters" }
