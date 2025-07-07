@@ -3,6 +3,10 @@
 version = 4
 
 [[package]]
+name = "collections"
+version = "0.1.0"
+
+[[package]]
 name = "enums"
 version = "0.1.0"
 
@@ -22,6 +26,7 @@ version = "0.1.0"
 name = "main"
 version = "0.1.0"
 dependencies = [
+ "collections",
  "enums",
  "functions",
  "hello_world",
