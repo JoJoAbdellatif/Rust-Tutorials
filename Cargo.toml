@@ -9,6 +9,7 @@
         "enums",
         "collections",
         "iters",
+        "optionals",
         ]
 
     resolver = "3"

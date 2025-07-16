@@ -31,9 +31,14 @@ dependencies = [
  "functions",
  "hello_world",
  "iters",
+ "optionals",
  "ownership",
  "variables",
 ]
+
+[[package]]
+name = "optionals"
+version = "0.1.0"
 
 [[package]]
 name = "ownership"

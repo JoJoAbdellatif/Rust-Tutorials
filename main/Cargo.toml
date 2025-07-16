@@ -11,3 +11,4 @@
     enums = { path = "../enums" }
     collections = { path = "../collections"}
     iters = { path = "../iters" }
+    optionals = { path = "../optionals" }
