@@ -11,6 +11,10 @@ name = "enums"
 version = "0.1.0"
 
 [[package]]
+name = "error_handling"
+version = "0.1.0"
+
+[[package]]
 name = "functions"
 version = "0.1.0"
 
@@ -28,6 +32,7 @@ version = "0.1.0"
 dependencies = [
  "collections",
  "enums",
+ "error_handling",
  "functions",
  "hello_world",
  "iters",
