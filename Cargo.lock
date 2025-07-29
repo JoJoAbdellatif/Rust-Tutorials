@@ -27,6 +27,10 @@ name = "iters"
 version = "0.1.0"
 
 [[package]]
+name = "lifetimes"
+version = "0.1.0"
+
+[[package]]
 name = "main"
 version = "0.1.0"
 dependencies = [
@@ -36,6 +40,7 @@ dependencies = [
  "functions",
  "hello_world",
  "iters",
+ "lifetimes",
  "optionals",
  "ownership",
  "variables",
