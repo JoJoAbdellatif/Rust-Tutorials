@@ -20,6 +20,11 @@ This is a Repository for learning the basics of rust. It contains as many pieces
     - install `rustup`:
         - download file: https://www.rust-lang.org/tools/install
         - run the installation to install the standard packages
+        - If Rust analyzer does not work yet, then cargo needs to be added to system ENVs:
+            1) Type in the start menu "Edit system environment variables".
+            2) Go to system variables.
+            3) Edit the system path.
+            4) Add the following path: "%USERPROFILE%\\.cargo\\bin"
     - download clippy (for verbose stuff):
         - in a CMD, write `rustup component add clippy`.
 
