@@ -11,7 +11,8 @@
         "iters",
         "optionals",
         "error_handling",
-        "lifetimes"
+        "lifetimes",
+        "traits"
         ]
 
     resolver = "3"

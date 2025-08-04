@@ -14,3 +14,4 @@
     optionals = { path = "../optionals" }
     error_handling = { path = "../error_handling" }
     lifetimes = { path = "../lifetimes" }
+    traits = { path = "../traits" }
