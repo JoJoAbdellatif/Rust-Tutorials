@@ -15,3 +15,4 @@
     error_handling = { path = "../error_handling" }
     lifetimes = { path = "../lifetimes" }
     traits = { path = "../traits" }
+    pointers = { path = "../pointers" }

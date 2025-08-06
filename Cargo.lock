@@ -43,6 +43,7 @@ dependencies = [
  "lifetimes",
  "optionals",
  "ownership",
+ "pointers",
  "traits",
  "variables",
 ]
@@ -53,6 +54,10 @@ version = "0.1.0"
 
 [[package]]
 name = "ownership"
+version = "0.2.0"
+
+[[package]]
+name = "pointers"
 version = "0.2.0"
 
 [[package]]

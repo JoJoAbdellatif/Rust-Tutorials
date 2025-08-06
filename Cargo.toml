@@ -12,7 +12,8 @@
         "optionals",
         "error_handling",
         "lifetimes",
-        "traits"
+        "traits",
+        "pointers"
         ]
 
     resolver = "3"
