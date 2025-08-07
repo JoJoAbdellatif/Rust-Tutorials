@@ -13,7 +13,8 @@
         "error_handling",
         "lifetimes",
         "traits",
-        "pointers"
+        "pointers",
+        "generics"
         ]
 
     resolver = "3"

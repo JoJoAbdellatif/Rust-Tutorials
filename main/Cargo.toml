@@ -16,3 +16,4 @@
     lifetimes = { path = "../lifetimes" }
     traits = { path = "../traits" }
     pointers = { path = "../pointers" }
+    generics = { path = "../generics" }

@@ -19,6 +19,10 @@ name = "functions"
 version = "0.1.0"
 
 [[package]]
+name = "generics"
+version = "0.2.0"
+
+[[package]]
 name = "hello_world"
 version = "0.1.0"
 
@@ -38,6 +42,7 @@ dependencies = [
  "enums",
  "error_handling",
  "functions",
+ "generics",
  "hello_world",
  "iters",
  "lifetimes",
