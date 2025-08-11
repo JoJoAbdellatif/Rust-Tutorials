@@ -14,7 +14,8 @@
         "lifetimes",
         "traits",
         "pointers",
-        "generics"
+        "generics",
+        "async_rust"
         ]
 
     resolver = "3"

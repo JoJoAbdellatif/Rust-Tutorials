@@ -17,3 +17,4 @@
     traits = { path = "../traits" }
     pointers = { path = "../pointers" }
     generics = { path = "../generics" }
+    async_rust = { path = "../async_rust" }
