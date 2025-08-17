@@ -6,18 +6,18 @@ This is a Repository for learning the basics of rust. It contains as many pieces
 
 1) ### prerequisites
     - VScode installed
-    - visual studio installer (installer only) installed
-    - visual studio build tools installed with "Desktop development with C++"
+    - Visual studio installer (installer only) installed
+    - Visual studio build tools installed with "Desktop development with C++"
         - Download File: https://aka.ms/vs/17/release/vs_BuildTools.exe
         - This is used for linking the libraries to the binary in the building process
 
 2) ### installation
-    - install the `rust-analyzer` VScode extension:
+    - Install the `rust-analyzer` VScode extension:
         - go to extensions
         - type "rust-analyzer"
         - choose the verified one by rust-lang.org
         - install
-    - install `rustup`:
+    - Install `rustup`:
         - download file: https://www.rust-lang.org/tools/install
         - run the installation to install the standard packages
         - If Rust analyzer does not work yet, then cargo needs to be added to system ENVs:
@@ -25,14 +25,15 @@ This is a Repository for learning the basics of rust. It contains as many pieces
             2) Go to system variables.
             3) Edit the system path.
             4) Add the following path: "%USERPROFILE%\\.cargo\\bin"
-    - download clippy (for verbose stuff):
+    - Download clippy (for verbose stuff):
         - in a CMD, write `rustup component add clippy`.
 
 ## Hello, World
 
 1) ### Create New Workspace
-    - open a new file in the project root called `Cargo.toml` (with a Capitalized "C")
-    - insert the following in it:
+    - Open a new file in the project root called `Cargo.toml` (with a Capitalized "C").
+    - Note: DO NOT NAME THE ROOT FOLDER AS "Code". THIS DOES NOT INITIALIZE THE WORKSPACE PROPERLY.
+    - Insert the following in it:
         ```
         # toml
 
@@ -52,7 +53,7 @@ This is a Repository for learning the basics of rust. It contains as many pieces
         ```
 2) ### Create New SubProject
     - Open a Command Prompt and cd into the root folder (the same folder that has the `Cargo.toml`).
-    - write the following to create the new `hello_world` subproject:
+    - Write the following to create the new `hello_world` subproject:
         ```
         cargo new hello_world
 
@@ -60,7 +61,7 @@ This is a Repository for learning the basics of rust. It contains as many pieces
 
         cargo new hello_world --vcs none
         ```
-    - go to the hello_world folder and go to the `Cargo.toml` file in it. It should look like the following:
+    - Go to the hello_world folder and go to the `Cargo.toml` file in it. It should look like the following:
         ```
         [package]
             name = "hello_world"
@@ -74,7 +75,7 @@ This is a Repository for learning the basics of rust. It contains as many pieces
         #![deny(clippy::all)]
 
         fn main() {
-            !println("Hello, World");
+            println!("Hello, World");
         }
 
         ```
