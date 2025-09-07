@@ -2,7 +2,7 @@
 // They both allow writing code that works with different data types, which avoids code duplication and improves reusability.
 
 // Say, for example, a "Point" needs to be created that takes coordinates as integer values.
-struct Point {
+pub struct Point {
     x: i32,
     y: i32
 }
@@ -29,7 +29,7 @@ pub fn pre_generic_testing(){
 // "<T>" is used to define a generic data type.
 // "T" itself can actually be any name, letter, etc....
 // "T" is just the convention used.
-struct GenericPoint <T> {
+pub struct GenericPoint <T> {
     x: T,
     y: T
 }
@@ -61,7 +61,7 @@ impl <T> GenericPoint<T> {
     // This happens because at compile time, the compiler does not know the type of "T".
     // if "T" is of type "&str" then the function will fail.
     /*
-    fn shift_point(&mut self , x: T , y: T){
+    pub fn shift_point(&mut self , x: T , y: T){
         self.x += x;
         self.y += y;
     }
@@ -78,14 +78,14 @@ use std::ops::AddAssign;
 use std::ops::Add;
 
 // The use of "Copy" will not allow any object that does not implement "Copy" to be created.
-struct GenericPoint2 <T: Copy> {
+pub struct GenericPoint2 <T: Copy> {
     x: T,
     y: T
 }
 
 impl <T: Copy> GenericPoint2<T> {
     
-    fn shift_point_addassign(&mut self , x: T , y: T)
+    pub fn shift_point_addassign(&mut self , x: T , y: T)
     where 
         T: AddAssign,
     {
@@ -103,7 +103,7 @@ impl <T: Copy> GenericPoint2<T> {
 
 // This implementation means that if "<T>" conforms to "Add", then the function can be called without any issues. 
 impl <T: Add<Output = T> + Copy> GenericPoint2<T>{
-    fn shift_point_add(&mut self , x: T , y: T)
+    pub fn shift_point_add(&mut self , x: T , y: T)
     where 
         T: Add,
     {
