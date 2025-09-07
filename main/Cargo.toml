@@ -8,6 +8,7 @@
     variables = { path = "../variables" }
     ownership = { path = "../ownership" }
     functions = { path = "../functions" }
+    structs = { path = "../structs" }
     enums = { path = "../enums" }
     collections = { path = "../collections"}
     iters = { path = "../iters" }

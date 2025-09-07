@@ -234,6 +234,7 @@ dependencies = [
  "optionals",
  "ownership",
  "pointers",
+ "structs",
  "traits",
  "variables",
 ]
