@@ -16,7 +16,7 @@ pub fn errors() {
     // note the "error" of type "Box dynamic".
     match value {
         Ok(value) => println!("{}" , value),
-        Err(error) => println!("{}" , error)
+        Err(error) => println!("{error}")
     }
 
     // Exceptions can also be customized.
@@ -24,14 +24,14 @@ pub fn errors() {
     let value: Result<&str , ()> = Err(());
 
     match value {
-        Ok(value) => println!("{}" , value),
+        Ok(value) => println!("{value}"),
         Err(_) => println!("Some Error Occured")
     }
 
     // Results can have values expected from them using the ".expect(msg)" function.
     // This piece of code creates an inline function that returns a "Result".
     let get_user_name = || -> Result<String , ()> {
-        Ok("Joey".to_string())
+        Ok("Khan".to_string())
     };
 
     // After that, the function is called then checked upon to see if it has a value or not.
@@ -39,7 +39,7 @@ pub fn errors() {
     // If the function returns "Err" then the code will panic with the expected "msg".
     // The code will panic if the ".expect(msg)" returns an error
     let user_name = get_user_name().expect("Failed to get user_name.");
-    println!("Hello, {}" , user_name);
+    println!("Hello, {user_name}");
 
     // The ".expect_err(msg)" is the opposite.
     // It expects the code to actually bring an error and will panic if the result is "Ok".
@@ -54,7 +54,7 @@ pub fn errors() {
     // Results can be checked whether they're an "Err" or "Ok" with ".is_err()" and ".is_ok" functions.
     let ok = get_user_name().is_ok();
     let err = get_user_name().is_err();
-    println!("{} , {}" , ok , err);
+    println!("{ok} , {err}");
     
     // There is a cool feature in rust in which rust can trigger early exits in the code if an error is present.
     // As an example, consider the functions "get_first_name" , "get_last_name" , and "get_full_name".
@@ -65,19 +65,19 @@ pub fn errors() {
     };
     
     let get_last_name = || -> Result<String , ()> {
-        Ok("Joey".to_string())
+        Ok("Khan".to_string())
     };
     
     // Note the "?" for the failed exits in the following code.
     let get_full_name = || -> Result<String , ()> {
         let f_name = get_first_name()?;
         let l_name = get_last_name()?;
-        Ok(format!("{} {}" , f_name , l_name))
+        Ok(format!("{f_name} {l_name}"))
     };
     
     let full_name = get_full_name();
     match full_name {
-        Ok(name) => println!("Hello , {}" , name),
+        Ok(name) => println!("Hello , {name}"),
         Err(_) => println!("ERROR!")
     }
     
