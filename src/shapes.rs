@@ -1,3 +1,5 @@
+use std::f64::consts::PI;
+
 // Enums in Rust are very flexible because enum values can have attributes that define each enum value.
 // It is kind of like adding a structure in an enum.
 // Here, the values in "Shapes" enum is defined using curly braces.
@@ -14,7 +16,7 @@ impl Shapes {
         // Most programming languages can return the values from the switch statements using the return keyword.
         // It is very rare, however, to see that a switch statement that can actually be assigned to a variable.
         let area = match self {
-            Shapes::Circle { center: _, radius } => 3.14 * radius * radius,
+            Shapes::Circle { center: _, radius } => PI * radius * radius,
             Shapes::Rectangle { width, height } => width * height,
         };
 
@@ -32,7 +34,7 @@ pub fn enum_testing() {
     // To compare enums with associated values, the "if let" statement is used.
     // The following piece checks if "rect" is of type rectangle or not.
     if let Shapes::Rectangle { width, height } = rect{
-        println!("This shape is a Rectangle with width = {}, height = {}, and area = {}!" , width , height , rect.calc_area());
+        println!("This shape is a Rectangle with width = {width}, height = {height}, and area = {}!" , rect.calc_area());
     }
 
     // These types of enums can also be matched with a switch statement.
@@ -50,7 +52,7 @@ pub fn enum_testing() {
 
 // Values in enums can also be defined using parentheses, making them tuples and unnamed.
 // The associated values can also be a struct.
-struct Size {
+pub struct Size {
     width: f32,
     height: f32,
 }
