@@ -9,7 +9,7 @@ pub fn iterating_over_vector () {
     let values = vec![1 , 2 , 3 , 4 , 5];
     
     for value in values.iter(){
-        println!("{}" , value);
+        println!("{value}" , );
     }
 
     // Some functions can be performed on the iterator itself.
