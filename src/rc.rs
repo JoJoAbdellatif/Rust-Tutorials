@@ -14,7 +14,7 @@ use std::rc::Rc;
 
 fn _rc_pointers() {
     // To create an "Rc" reference, create the object first, and then wrap it with "Rc" with "Rc::new()".
-    let name1 = "Joey".to_string();
+    let name1 = "Khan".to_string();
 
     let reference1 = Rc::new(name1);
 

@@ -65,7 +65,7 @@ pub fn age_in_boxed_value() {
 // One of these cases is in functions.
 // Try to print a reference in the function.
 pub fn print(reference: &u8) {
-    println!("{}" , reference);
+    println!("{reference}");
 }
 
 // This can also work with "BoxedValue".

@@ -10,5 +10,5 @@ pub fn boxx() {
 
     // To dereference a pointer, it's just like C++.
     let mult_by_2 = *x * 2;
-    println!("x times 2 = {}" , mult_by_2)
+    println!("x times 2 = {mult_by_2}")
 }
