@@ -33,7 +33,7 @@ pub fn futures_testing() {
     // The "block_on()" function will await, and unwrap the data coming to reveal the return type of the function called: "String" in this case.
     // To use the "block_on()", the import above at the beginning of the file needs to be done.
     let name_2 = block_on(get_name());
-    println!("Hello, {}" , name_2);
+    println!("Hello, {name_2}");
 }
 
 // Since Async returns a "Future", then the function can return a "Future".
@@ -63,6 +63,6 @@ pub async fn futures_future_testing(){
     // await needs to be called here and then the "String" will be unwrapped from the "Future".
     // The call changes from "block_on()" to ".await".
     let text_future = get_name_future().await;
-    println!("{}" , text_future)
+    println!("{text_future}")
 
 }

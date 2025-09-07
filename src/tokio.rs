@@ -29,11 +29,11 @@ impl TokioLib {
             // A ".await" can be called here to await the sleep till it's done.
             sleep(Duration::from_secs(1)).await;
             let call_1 = "Khan".to_string();
-            println!("Processed: {}", call_1);
+            println!("Processed: {call_1}");
 
             sleep(Duration::from_secs(1)).await;
             let call_2 = "Khalily".to_string();
-            println!("Processed: {}", call_2)
+            println!("Processed: {call_2}")
         })
     }
 }
