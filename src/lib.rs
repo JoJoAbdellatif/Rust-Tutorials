@@ -31,7 +31,7 @@ pub fn say_hello_to(to_person: String) -> String {
     // code goes here
 
     // This function returns "Hello World"
-    format!("Hello, {}!" , to_person)
+    format!("Hello, {to_person}!")
 }
 
 // Functions can be passed as arguments in rust.
@@ -42,10 +42,10 @@ pub fn func_in_arg(function: fn(i32 , i32) -> i32){
 pub fn func_testing() {
     let _hello = say_hello_world();
 
-    say_hello_to(String::from("Joeyyy"));
+    say_hello_to(String::from("Khannn"));
 
     // Functions can be done inline instead of writing them on top.
-    let _greeting = |name: &str| format!("Welcome to Inline, {}" , name);
+    let _greeting = |name: &str| format!("Welcome to Inline, {name}");
 
     // Inline Functions can have multiple arguments.
     // Since the following function is a one line code, the curly braces that wrap the inline function can be removed. 
