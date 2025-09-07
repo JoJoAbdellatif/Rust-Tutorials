@@ -41,7 +41,7 @@ pub fn functions_on_hashmaps() {
         // "If something is found in this value, print it."
         // "If nothing is found in this value, print 'Not Found'."
     match map.get("Key"){
-        Some(value) => println!("Value is -> {}" , value),
+        Some(value) => println!("Value is -> {value}"),
         None => println!("Not Found"),
     }
 
@@ -52,7 +52,7 @@ pub fn functions_on_hashmaps() {
         // "Then put the references as is in 'k' and 'v' respectively."
     // Note that the map needs to be referenced.
     for (k , v) in &map {
-        println!("{} : {}" , k , v);
+        println!("{k} : {v}");
     }
 
     // So why does the code above work but the following commented code doesn't?
@@ -66,7 +66,7 @@ pub fn functions_on_hashmaps() {
     // "String" is not of type copy.
     /*
     for (&k , &v) in &map {
-        println!("{} : {}" , k , v);
+        println!("{k} : {v}");
     }
     */
 
@@ -79,7 +79,7 @@ pub fn functions_on_hashmaps() {
     let mut mapstr: HashMap<&str, &str> = HashMap::new();
     mapstr.insert("Key", "Value");
     for (&k , &v) in &mapstr{
-        println!("{} : {}" , k , v);
+        println!("{k} : {v}");
     }
     
     // The following "entry" function gets the entire entry with the specified key.
@@ -118,12 +118,12 @@ pub fn functions_on_hashmaps() {
 // Without deriving them, a compile error will be thrown.
 // This wasn't required by "String" because RUST already implements these traits in the definition of the "String"
 #[derive(Hash, Eq, PartialEq)]
-struct Person {
+pub struct Person {
     name: String,
     age: u8,
 }
 
 pub fn structs_in_hashmaps() {
     let mut h_map: HashMap<Person , &str> = HashMap::new();
-    h_map.insert(Person { name: "Joey".to_string(), age: 20 }, "test");
+    h_map.insert(Person { name: "Khan".to_string(), age: 20 }, "test");
 }

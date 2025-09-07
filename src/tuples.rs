@@ -5,5 +5,5 @@ pub fn tuple_return() -> (String , String , i32) {
 
 pub fn tuple_testing() {
     let (hello , _ , _) = tuple_return();
-    println!("{}" , hello);
+    println!("{hello}");
 }

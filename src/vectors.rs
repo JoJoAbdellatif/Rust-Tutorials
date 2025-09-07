@@ -14,7 +14,7 @@ pub fn vector_fixed_size() -> [String ; 2] {
 // Using loops to iterate over a vector is done by calling the "iter()" function in vectors:
 pub fn iter_over_vector_loops() {
     for value in vector_fixed_size().iter(){
-        println!("{}" , value);
+        println!("{value}");
     }
 }
 
@@ -22,7 +22,7 @@ pub fn iter_over_vector_loops() {
 pub fn specific_vector_element() {
     let values = vector_fixed_size();
     let hello = &values[0];
-    println!("{}, {}" , hello , &values[1]);
+    println!("{hello}, {}" , &values[1]);
 }
 
 // Values in a vector can be mapped.
