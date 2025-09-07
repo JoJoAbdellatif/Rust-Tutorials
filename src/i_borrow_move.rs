@@ -14,11 +14,11 @@
 
 pub fn borrow_vs_moving_str() {
     /*
-    let s1 = String::from("JoJo");
+    let s1 = String::from("Khalili");
     let s2 = s1;
 
-    println!("Hello, {}", s1);
-    println!("Hello, {}", s2);
+    println!("Hello, {s1}", );
+    println!("Hello, {s2}", );
     */
 }
 
@@ -30,8 +30,8 @@ pub fn borrow_vs_moving_int() {
     let age1 = 10;
     let age2 = age1;
 
-    println!("You are {} years old", age1);
-    println!("You are {} years old", age2);
+    println!("You are {age1} years old");
+    println!("You are {age2} years old");
 }
 
 // So how to make the "borrow_vs_moving_str()" function work?
@@ -39,11 +39,11 @@ pub fn borrow_vs_moving_int() {
 // The reference "s2" actually sits in the stack.
 // See a good reference image at: https://doc.rust-lang.org/book/img/trpl04-06.svg
 pub fn borrow_vs_moving_str_correction() {
-    let s1 = String::from("JoJo");
+    let s1 = String::from("Khalili");
     let s2 = &s1;
 
-    println!("Hello, {}", s1);
-    println!("Hello, {}", s2);
+    println!("Hello, {s1}");
+    println!("Hello, {s2}");
 }
 
 pub fn code_block() {
@@ -51,8 +51,8 @@ pub fn code_block() {
 
     // Sample Code Block:
     {
-        let name = String::from("Joey");
-        println!("hello, {}, from code_block", name);
+        let name = String::from("Khan");
+        println!("hello, {name}, from code_block");
     }
     // "name" here, outside of the code block, gives a compile error because the code now has gone out of scope.
     // This means that "name" is no longer allocated.

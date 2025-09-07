@@ -78,5 +78,5 @@ pub fn demo_read_with_write() {
     // Now we can borrow mutably again, such as in this code, or the mut can be replaced with a read-only reference.
     let r2 = &mut s;
     r2.push_str("!");
-    println!("{}", s);
+    println!("{s}");
 }
