@@ -2,7 +2,7 @@
 // Without these lifetimes, Rust will not know for how long should an attribute within the struct live.
 // The following struct gives an error because it does not specify a lifetime.
 /*
-struct Person{
+pub struct Person{
     name: &str,
 }
 */
@@ -11,16 +11,16 @@ struct Person{
 // The lifetime specifier in this case is "<'a>" but it can be anything else other than the "a".
 // The attributes should at least live for as long as the lifetime of the struct itself
 
-struct _Person <'a> {
+pub struct _Person <'a> {
     name: &'a str,
 }
 
 // Some people write the lifetime specifier as "'static" to make the attribute live for as long as the application is alive
-struct _Person2 {
+pub struct _Person2 {
     name: &'static str,
 }
 
 // Lifetime specifiers also work for enums
-enum _Animal<'a> {
+pub enum _Animal<'a> {
     Dog { name: &'a str },
 }

@@ -19,12 +19,12 @@ pub fn rule2(f_name: &str) -> &str{
 // Rule 3:
 // If there are multiple input references, but the method uses "&self" or "&mut self", then the lifetime of self is assigned to all output references.
 
-struct _Person <'a> {
+pub struct _Person <'a> {
     name: &'a str,
 }
 
 impl<'a> _Person<'a> {
-    fn _get_name(&self, _prefix: &str) -> &str {
+    pub fn _get_name(&self, _prefix: &str) -> &str {
         self.name
     }
 }

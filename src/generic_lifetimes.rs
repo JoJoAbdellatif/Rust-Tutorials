@@ -9,27 +9,27 @@
 // They do not own the string.
 /*
 pub fn lifetime_error_1() -> &str {
-    &"Joeyyyy"
+    &"Khannnn"
 }
 */
 
 // When the return type is changed to "String", it works because the return type is an actual instance and not a reference.
 // This also doesn't return an error because the caller of the function will own the value returned from this function
 pub fn lifetime() -> String {
-    "Joeyyyy".to_string()
+    "Khannnn".to_string()
 }
 
 // When the return type is changed to "&String", it then fails because the return type is a reference and not an actual instance.
 /*
 pub fn lifetime_error_3() -> &String {
-    &"Joeyyyy".to_string()
+    &"Khannnn".to_string()
 }
 */
 
 // Starting off, the "'static" keyword (notice the apostrophe) indicates that the reference should be alive throughout the entirety of the application's lifetime.
-// This means that "Joeyyyy" will be stored in a place in the heap, in such a way that will make the variable live until the application terminates.
+// This means that "Khannnn" will be stored in a place in the heap, in such a way that will make the variable live until the application terminates.
 pub fn static_lifetime() -> &'static str {
-    "Joeyyyy"
+    "Khannnn"
 }
 
 // Take the following function.
@@ -62,17 +62,17 @@ pub fn input_lifetime() {
     // The returned reference from the function "longest()" will be live only as long as the arguments live.
     // This is completely safe because rust assigns "&str" values by default to be "'static".
     // This means that the strings will actually outlive the references no matter what.
-    let _longer_str = longest("Joeyyy", "JoJo");
+    let _longer_str = longest("Khannn", "Khalili");
 
     // Say that the same thing is done with a "&String".
     // This will also compile because the strings live until the end of the statement.
-    let _longer_string = longest(&"Joeyyy".to_string(), &"JoJo".to_string());
+    let _longer_string = longest(&"Khannn".to_string(), &"Khalili".to_string());
 
     // Now try to print...
     // It'll immediately cause the line above to give a compilation error.
     // Why? This happens because the the strings, when declared within the parameters, will die right after the line finishes execution.
     /*
-    println!("{}" , _longer_string);
+    println!("{_longer_string}");
     */
 
     // To get around this, the strings need to be declared from before, like the following.
@@ -80,5 +80,5 @@ pub fn input_lifetime() {
     let x = "long_string_1";
     let y = "longer_string_2";
     let longer = longest(x, y);
-    println!("{}" , longer);
+    println!("{longer}");
 }
