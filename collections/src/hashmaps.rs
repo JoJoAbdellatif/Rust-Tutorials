@@ -125,5 +125,5 @@ struct Person {
 
 pub fn structs_in_hashmaps() {
     let mut h_map: HashMap<Person , &str> = HashMap::new();
-    h_map.insert(Person { name: "Joey".to_string(), age: 20 }, "test");
+    h_map.insert(Person { name: "Khan".to_string(), age: 20 }, "test");
 }

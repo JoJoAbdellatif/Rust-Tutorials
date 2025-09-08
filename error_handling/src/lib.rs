@@ -30,7 +30,7 @@ pub fn errors() {
 
     // Results can have values expected from them using the ".expect(msg)" function.
     // This piece of code creates an inline function that returns a "Result".
-    let get_user_name = || -> Result<String, ()> { Ok("Joey".to_string()) };
+    let get_user_name = || -> Result<String, ()> { Ok("Khan".to_string()) };
 
     // After that, the function is called then checked upon to see if it has a value or not.
     // If the function has an "Ok" value, the print statement will run.
@@ -60,7 +60,7 @@ pub fn errors() {
     // This will make the error propagate until it is being matched using the "match" statement.
     let get_first_name = || -> Result<String, ()> { Err(()) };
 
-    let get_last_name = || -> Result<String, ()> { Ok("Joey".to_string()) };
+    let get_last_name = || -> Result<String, ()> { Ok("Khan".to_string()) };
 
     // Note the "?" for the failed exits in the following code.
     let get_full_name = || -> Result<String, ()> {

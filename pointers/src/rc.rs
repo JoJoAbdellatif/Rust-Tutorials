@@ -14,18 +14,17 @@ use std::rc::Rc;
 
 fn _rc_pointers() {
     // To create an "Rc" reference, create the object first, and then wrap it with "Rc" with "Rc::new()".
-    let name1 = "Joey".to_string();
+    let name1 = "Khan".to_string();
 
     let reference1 = Rc::new(name1);
 
     // To get a weak reference, the ".downgrade()" method is called on the "Rc" object that was created.
     let weak_reference1 = Rc::downgrade(&reference1);
 
-    
     /*
     // If the original reference is dropped, then the weak references will fail.
     drop(reference1);
-    
+
     // Say, for example, the weak reference is to be upgraded later on.
     // Rust will panic (Runtime Error)
     // The ".upgrade()" function returns an optional, so it needs to be unwrapped to extract the value inside.
@@ -34,7 +33,7 @@ fn _rc_pointers() {
 
     // since the ".upgrade()" method returns an optional, it can be used in "match" statements.
     match weak_reference1.upgrade() {
-        Some(rc) => println!("{:?}" , rc),
+        Some(rc) => println!("{:?}", rc),
         _ => println!("None"),
     }
 
@@ -47,9 +46,8 @@ fn _rc_pointers() {
     // Dropping "reference1" and printing the value in "reference3" here will completely work fine.
     // This works because both references are not tied to each other.
     drop(reference1);
-    println!("{:?}" , reference3);
+    println!("{:?}", reference3);
 
     drop(reference3);
     drop(reference4);
-
 }

@@ -11,11 +11,11 @@ pub fn optionals() {
     // The optional can be unwrapped safely when needed using a "match" statement.
     // A "match" statement is needed because without it, the variable may still be None which will make any unwrapping in this case very not safe.
     // The "match" is needed to handle handle the "None" case safely.
-    // The ".clone()" in this specific example is used because the value of name will be moved in the unwrapping process, and it will be needed in the future. 
-    let name = Some("Joey".to_string());
+    // The ".clone()" in this specific example is used because the value of name will be moved in the unwrapping process, and it will be needed in the future.
+    let name = Some("Khan".to_string());
     match name.clone() {
-        Some(name) => println!("Name is: {}." , name),
-        None => println!("There is no name.")
+        Some(name) => println!("Name is: {}.", name),
+        None => println!("There is no name."),
     }
 
     // A name can be unwrapped in an unsafe way without a compile error.
@@ -34,7 +34,7 @@ pub fn optionals() {
         None => {}
     }
 
-    println!("age = {}." , maybe_mut_age.unwrap());
+    println!("age = {}.", maybe_mut_age.unwrap());
 
     // Multiple optionals can be unwrapped with tuples.
     // All optionals must have a value.
@@ -44,19 +44,19 @@ pub fn optionals() {
     let age2 = Some(20);
     let age3 = Some(30);
 
-    if let (Some(age_1) , Some(age_2) , Some(age_3)) = (age1 , age2 , age3) {
-        println!("{}, {}, {}" , age_1 , age_2 , age_3);
-        println!("{}" , age_1 + age_2 + age_3);
+    if let (Some(age_1), Some(age_2), Some(age_3)) = (age1, age2, age3) {
+        println!("{}, {}, {}", age_1, age_2, age_3);
+        println!("{}", age_1 + age_2 + age_3);
     }
 
     // Unwrapping optionals can have a set default option.
     // This option allows the default to be inserted in case the optional is still "None".
     let name: Option<&str> = None;
-    let _unwrapped_name = name.unwrap_or("Joey");
+    let _unwrapped_name = name.unwrap_or("Khan");
 
     // If "name" is already set, then the unwrapped value in "name" will be used.
-    let name: Option<&str> = Some("Joey");
-    let _unwrapped_name = name.unwrap_or("JoJo");
+    let name: Option<&str> = Some("Khan");
+    let _unwrapped_name = name.unwrap_or("Khalili");
 
     // If the optional value is "None", then a function can be used to do some work and return a value.
     // The function is inline and does not take any arguments.
@@ -64,7 +64,7 @@ pub fn optionals() {
     // Just because it is an inline function, it doesn't mean that the function is restricted to be 1 line.
     // It can be an entire code-block.
     let value: Option<i8> = None;
-    let _unwrapped_value = value.unwrap_or_else(|| { 10 * 2 });
+    let _unwrapped_value = value.unwrap_or_else(|| 10 * 2);
 
     // using ".is_some()" or ".is_none()" will return a boolean of whether an optional actually has a value or not.
     let _bl = value.is_some();
@@ -81,5 +81,4 @@ pub fn optionals() {
     let value: Option<i32> = None;
     let mapped_value = value.map(|value| value * 2);
     println!("{}", mapped_value.unwrap_or_default());
-
 }

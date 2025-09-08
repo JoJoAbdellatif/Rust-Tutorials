@@ -36,8 +36,8 @@ pub fn vars() {
     _x = "world";
 
     // Completely fine to do in rust
-    let _name = "Joey";
-    let _name = "JoJo";
+    let _name = "Khan";
+    let _name = "Khalili";
 
     let _username = "Mo";
     let _username = 2;
@@ -63,7 +63,7 @@ pub fn vars() {
     // Tuples
 
     // Tuples are identified by the parenthesis.
-    let data: (&str, u8) = ("Joey", 22u8);
+    let data: (&str, u8) = ("Khan", 22u8);
     let _xyz = data.1;
 
     // The following context unpacks the elements in "data" into "_name" and "_age".

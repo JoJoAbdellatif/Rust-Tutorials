@@ -14,7 +14,7 @@
 
 pub fn borrow_vs_moving_str() {
     /*
-    let s1 = String::from("JoJo");
+    let s1 = String::from("Khalili");
     let s2 = s1;
 
     println!("Hello, {}", s1);
@@ -39,7 +39,7 @@ pub fn borrow_vs_moving_int() {
 // The reference "s2" actually sits in the stack.
 // See a good reference image at: https://doc.rust-lang.org/book/img/trpl04-06.svg
 pub fn borrow_vs_moving_str_correction() {
-    let s1 = String::from("JoJo");
+    let s1 = String::from("Khalili");
     let s2 = &s1;
 
     println!("Hello, {}", s1);
@@ -51,7 +51,7 @@ pub fn code_block() {
 
     // Sample Code Block:
     {
-        let name = String::from("Joey");
+        let name = String::from("Khan");
         println!("hello, {}, from code_block", name);
     }
     // "name" here, outside of the code block, gives a compile error because the code now has gone out of scope.
