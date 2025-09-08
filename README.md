@@ -2,6 +2,8 @@
 
 This is a Repository for learning the basics of rust. It contains as many pieces of code as possible to be explored. This markdown discusses rust installation and writing the helloworld program.
 
+These tutorials are based mostly on [Vandad Nahavandipoor's playlist](https://www.youtube.com/playlist?list=PL6yRaaP0WPkWRsXJgdnw9lj1vchAaKwfS) on Youtube.
+
 ## Install Rust on VScode
 
 1) ### prerequisites
