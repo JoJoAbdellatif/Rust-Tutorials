@@ -2,7 +2,7 @@
 // Rust used to have classes but now they are no longer available.
 // Structs are written in PascalCase.
 // Each field describing the struct is separated by a comma.
-struct Person {
+pub struct Person {
     name: String,
     gender: bool, // male is false , female is true (just for the sake of ease)
     age: u8,
@@ -12,7 +12,7 @@ pub fn instantiate() {
     // Creating an instance of the structure is as follows.
     // Instantiating while writing the "name" and "age" keywords (at least in this specific case) means that the order does not matter.
     let _man = Person {
-        name: "Joeyy".to_string(),
+        name: "Khann".to_string(),
         gender: false,
         age: 22,
     };
@@ -35,22 +35,22 @@ pub fn instantiate() {
     // Instance B is almost identical to Instance A, but Instance B has a few fields that have different values than Instance A.
     // This allows the use of something called "Struct Update Syntax".
     let instance_a = Person {
-        name: "Joe".to_string(),
+        name: "Khalili".to_string(),
         gender: false,
         age: 22,
     };
 
-    // Instance B will then have someone who is also a male and 20 years old but he is someone else other than "Joe".
+    // Instance B will then have someone who is also a male and 20 years old but he is someone else other than "Khalili".
     // The "Struct Update Syntax" is going to be used here.
     // It spreads the remaining fields and adds the values from fields in Instance A into Instance B.
     let _instance_b = Person {
-        name: "Youssef".to_string(),
+        name: "John".to_string(),
         ..instance_a
     };
 
     // Of course Instance B can take the values of Instance A manually as well...
     let _instance_b = Person {
-        name: "Youssef".to_string(),
+        name: "John".to_string(),
         gender: instance_a.gender,
         age: instance_a.age,
     };

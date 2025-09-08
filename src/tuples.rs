@@ -1,5 +1,5 @@
 // A tuple struct is created and instantiated with parenthesis.
-struct Point3D(f64 , f64 , f64);
+pub struct Point3D(f64 , f64 , f64);
 
 // The implementation of the logic for the point uses the "impl" keyword followed by the struct name.
 // Inside the "impl" code block, all the functions can be written.
@@ -8,17 +8,17 @@ struct Point3D(f64 , f64 , f64);
 impl Point3D {
     // The "&self" reference in the "describe" and "multiply_by_2" functions is immutable.
     // The values in the instance referenced by "&self" cannot be modified.
-    fn describe(&self) {
+    pub fn describe(&self) {
         println!("Point is at ({} , {} , {})" , self.0 , self.1 , self.2);
     }
 
     // This function multiplies each value in the point by 2 and returns a new point
-    fn multiply_by_2(&self) -> Point3D {
+    pub fn multiply_by_2(&self) -> Point3D {
         Point3D(self.0 * 2.0 , self.1 * 2.0 , self.2 * 2.0)
     }
 
     // The following function takes a mutable referece "&mut self".
-    fn multiply_by_2_mut(&mut self){
+    pub fn multiply_by_2_mut(&mut self){
         self.0 *= 2.0;
         self.1 *= 2.0;
         self.2 *= 2.0;
@@ -32,7 +32,7 @@ impl Point3D {
     // some functions are called a non-method associated function.
     // This kind of functions does not need the associative reference of "&self".
     // The following function returns a point that sets all fields to 0.
-    fn zero() -> Point3D{
+    pub fn zero() -> Point3D{
         Point3D(0.0 , 0.0 , 0.0)
     }
 }
