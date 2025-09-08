@@ -17,8 +17,8 @@ struct Person {
 // Try to create a "Person" and print its values as debug values without deriving the "Debug" Trait.
 pub fn print_person(){
     let p1 = Person{
-        _first_name: "Joeyy".to_string(),
-        _last_name: "Joe".to_string(),
+        _first_name: "Khann".to_string(),
+        _last_name: "Khalili".to_string(),
         _age: 30 
     };
     
@@ -28,7 +28,7 @@ pub fn print_person(){
 
 // In order to fix it, the traits need to derived just before creating the struct.
 #[derive(Debug)]
-struct Person {
+pub struct Person {
     _first_name: String,
     _last_name: String,
     _age: u8,
@@ -37,8 +37,8 @@ struct Person {
 // Try to create a "Person" and print its values as debug values after deriving the "Debug" Trait.
 pub fn print_person(){
     let p1 = Person{
-        _first_name: "Joeyy".to_string(),
-        _last_name: "Joe".to_string(),
+        _first_name: "Khann".to_string(),
+        _last_name: "Khalili".to_string(),
         _age: 30 
     };
     
@@ -47,7 +47,7 @@ pub fn print_person(){
 }
 
 // Rust also allows the user to create custom traits.
-trait HasFullName {
+pub trait HasFullName {
     fn full_name(&self) -> String;
 }
 
@@ -64,7 +64,7 @@ impl HasFullName for Person {
 // This means that the instance can be created with the following format:
     // "let <variable> = <struct_name>::new_instance(<Parameter>);"
     // "new_instance" can be renamed to any other name.
-trait InitWithFullName {
+pub trait InitWithFullName {
     fn new_instance(full_name: &str) -> Self;
 }
 
@@ -81,7 +81,7 @@ impl InitWithFullName for Person {
 }
 
 pub fn new_person(){
-    let p1 = Person::new_instance("Joeyyy Joe");
+    let p1 = Person::new_instance("Khannn Khalili");
     
     println!("{:?}" , p1);
 }
@@ -113,11 +113,11 @@ impl fmt::Display for Person {
 }
 
 // Traits can implement another traits using the "where" Keyword.
-trait HasName {
+pub trait HasName {
     fn first_name(&self) -> String;
     fn last_name(&self) -> String;
 }
-trait PrintFullName where Self: HasName, {
+pub trait PrintFullName where Self: HasName, {
     fn print_full_name(&self) -> String;
 }
 

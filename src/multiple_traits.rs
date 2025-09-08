@@ -1,16 +1,16 @@
 
 // Traits can also be passed as arguments.
 // Take for example the following 2 structs: "Cat" and "Dog".
-struct Cat {
+pub struct Cat {
     name: String,
 }
 
-struct Dog {
+pub struct Dog {
     name: String,
 }
 
 // Now, any dog or cat should be able to speak (meow or bark).
-trait Talk {
+pub trait Talk {
     fn speak(&self) -> String;
 }
 
@@ -45,7 +45,7 @@ pub fn create_animals() {
 // This can be addressed using a function that takes a trait as a parameter.
 // Effectively, this means that:
     // "Any type that implements the trait ('Talk' in this example) will be accepted as an input, even if I don’t know its exact type."
-fn make_speak(animal: &dyn Talk) -> String {
+pub fn make_speak(animal: &dyn Talk) -> String {
     animal.speak()
 }
 
@@ -66,7 +66,7 @@ pub fn animals() {
 // This is done by using the keyword "where".
 // It basically says:
     // "Accept any input which implements traits x + y + etc..."
-trait CanRun {
+pub trait CanRun {
     fn run(&self) -> String;
 }
 
@@ -82,10 +82,10 @@ impl CanRun for Dog {
     }
 }
 
-fn make_run(animal: &dyn CanRun) -> String {
+pub fn make_run(animal: &dyn CanRun) -> String {
     animal.run()
 }
 
-fn print_behavior<T>(animal: T) where T: CanRun + Talk {
+pub fn print_behavior<T>(animal: T) where T: CanRun + Talk {
     println!("{} {}" , make_speak(&animal) , make_run(&animal));
 }
