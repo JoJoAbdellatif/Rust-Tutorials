@@ -6,13 +6,13 @@
 // To use "Cell", it needs to be imported.
 use std::cell::Cell;
 
-struct Person {
+pub struct Person {
     name: String,
     age: Cell<u8>
 } 
 
 impl Person {
-    fn increment_age(&self) {
+    pub fn increment_age(&self) {
         // To utilize the internal mutibility, the "Cell" works with getters and setters.
         // The following function call gets the value in the "Cell", adds 1 to it, and then sets the "Cell" to the resulting value.
         self.age.set(self.age.get() + 1);
